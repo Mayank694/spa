@@ -1,0 +1,143 @@
+.form-wrapper {
+    padding-top:150px;
+    padding-bottom: 200px;
+    .form {
+    width:400px;
+    margin: 0 auto;
+    background:transparent;
+    text-align: center;
+    padding:20px;
+    
+    .terms {
+      font-size:12px;
+      margin-top: 10px;
+    }
+    .form-heading {
+      font-weight:600;
+      font-size:2rem;
+      margin-bottom:10px;
+    }
+    .form-description {
+      color: rgba(0,0,0,0.7);
+      margin-top:10px;
+      margin-bottom:20px;
+      font-size:16px;
+    }    
+  }  
+  .form-group {
+    position: relative;
+    input,select {
+    height:60px;
+    width: 100%;
+    display: block;
+    font-size:16px;
+    box-sizing: border-box;
+    padding:19px 20px 19px 30px;
+    border:1px solid rgba(0,0,0,0.3);
+    border-radius: 2px;
+    margin-bottom:10px;
+    font-weight:100;
+    font-size:16px; 
+    }
+    label {
+    position: absolute;
+    top:20px;
+    left:21px;
+    margin-left:10px;
+    font-size:18px;
+    opacity:0.4;
+    transition: all 0.3s; 
+    }
+    input:focus, select:focus {
+      outline: none;
+      border: 1px solid rgba(0,0,0,0.5);
+    }
+
+    [class^=icon-] {
+      position: absolute;
+      left:10px;
+      top:22px;
+    }
+    .fa-angle-down{
+      left:90%;
+    }
+    .active {
+      top:10px;
+      font-size:12px;
+    }
+    .drop-down {
+      display: none;
+      position:absolute;
+      z-index:3;
+      margin-top: 49px;
+      width:100%;
+      border: 1px solid rgba(0,0,0,0.5);
+      background: white;
+      margin-top:-12px;
+      border-top:none;
+      .search {
+        padding: 0 15px;
+      }
+      .fa-search{
+        top:13px;
+        left:85%;
+      }
+      .country-value {
+        padding:10px;
+        height:30px;   
+      }
+      .list {
+        text-align: left;
+        overflow-y: scroll;
+        max-height: 200px;
+        .item {
+          padding:10px 15px;
+        }
+        .item:hover {
+          background: #cdf;
+        }
+      }
+    }
+    .drop-down.active{
+      display: block;
+      margin-top: 49px;
+    }
+    
+  }
+  .form-group.has-error {
+    input {
+      border-color: red;
+    }
+  }
+  .submit {
+    width: 100%;
+    padding:10px 0 10px 0;
+    border-radius:5px;
+    background:$color-primary;
+    color: #000;
+    text-transform: uppercase;
+    font-size:14px;
+    } 
+  .error-wrapper {  
+    font-size:0.75rem;
+    font-style: normal;
+    text-align: left;
+    em {
+      color: red;
+      font-style: normal;
+    }
+   } 
+  .wrapper {
+    width:100%;
+    height:100vh;
+    padding-top:500px;
+    background: linear-gradient(45deg,red,blue);
+    }
+  }
+  @media only screen and (max-width:600px){
+    .form-wrapper {
+      .form {
+        width: unset;
+      }
+    }
+  }

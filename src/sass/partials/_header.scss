@@ -1,0 +1,242 @@
+// common styles 
+  //For large devices
+    header {
+      position: absolute;
+      top:0;
+      border-bottom:1px solid rgba(0,0,0,0.1);
+      left: 0;
+      width:100%;
+      .nav-wrapper{
+      background: white;
+      .burger {
+        display: none;
+      }
+      .navs {
+        padding: 5px 0;
+        .nav-logo {
+          display: inline-block;
+          .logo-image {
+             display: inline-block;
+            .logo{
+              background-image: url('https://melbournechapter.net/images/github-svg-square-4.png');
+              width:120px;
+              display: inline-block;
+              height:50px;
+              background-size:120px;
+              line-height:3.8;
+              position: relative;
+              .logo-text {
+                position: absolute;
+                top:0;
+                right:-5px;
+                color: black;
+                text-transform: capitalize;
+              }
+            }
+         }
+       }
+        .nav-links {
+          display: inline-block;
+          float: right;
+          .nav-item {
+            display: inline-block;
+            margin-top:20px;
+            cursor: pointer;
+            padding:0 15px;
+            .nav-sub-toggle{
+              vertical-align: middle;
+              margin-left: -5px;
+              font-size: 20px;
+              color: rgba(0,0,0,0.4);
+            }           
+          }
+          .nav-sub-item {
+            padding:5px;
+          }
+          .has-sub-menu:hover .nav-sub-menu{
+            opacity:1;
+            transform: rotateY(0deg);
+            perspective: 800px;
+          }
+          .nav-sub-menu {
+            position: absolute;
+            top:55px;
+            perspective: 800px;
+            transform:rotateX(90deg);
+            opacity:0;
+            transition: all 0.3s;
+            background: white;
+            padding:20px 15px;
+            z-index:200;
+            border-radius:5px;
+            box-shadow: 0px 0px 19px 1px rgba(0,0,0,0.1), 0px -3px 13px 1px rgba(0,0,0,0.1);
+            .p-fdesk:hover{                                                       background:#ebfaf2;
+            }
+            .product {
+              padding:5px;
+              .p-logo {
+                background-size:50%;
+                background-position:left;
+                height: 22px;
+                background-repeat: no-repeat;
+              }
+              .desc {
+                font-size:12px;
+                color: rgba(0,0,0,0.5);
+                margin-left:22px;
+                vertical-align: top;
+              }
+              .fdesk {
+                background-image: url('https://freshdesk.com/assets/images/common/company/logos/logo-fdesk-black-c41feb82.svg');
+              }
+              .fchat {
+                background-image: url('https://freshdesk.com/assets/images/common/company/logos/logo-fchat-black-f5b8d375.svg');
+              }
+              .fsales {
+                background-image: url('https://freshdesk.com/assets/images/common/company/logos/logo-fsales-black-9957c4d7.svg'); 
+              }
+              .fteam {
+                background-image: url('https://freshdesk.com/assets/images/common/company/logos/logo-fteam-black-5e4d2712.svg');
+                
+              }
+            }
+          }
+          .nav-sub-menu::before{
+            position: absolute;
+            content:'';
+            border: 8px solid;
+            border-color: transparent transparent white transparent;
+            top:-16px;
+            left:10%;
+          }
+        }
+      }
+    }
+  }
+
+  // for mobile and tablet
+  @media only screen and (max-width:600px){
+    header {
+      .nav-wrapper {
+        .burger {
+          margin-right:20px;
+          margin-top: 17px;
+          float: right;
+          display: block;
+          .first, .second, .third {
+            height:2px;
+            background: black;
+            transition: all 0.4s;
+            width:23px;
+            margin-bottom: 5px;
+          }
+          .third{
+            margin-bottom: 0;
+          }
+        }
+        .burger.active {
+          margin-top: 12px;
+          .first, .second, .third {
+            background: white;
+          }
+          .first{
+            transform: rotateZ(45deg) translateY(3px) translateX(3px);
+            transform-origin: left;
+          }
+          .second {
+            display: none;
+          }
+          .third {
+            transform: rotateZ(-44deg)  translateY(-7px) translateX(-3px);
+            transform-origin: right;
+          }
+        }
+        .nav-active {
+          height:100vh;
+          position: absolute;
+          z-index: 300;
+          width: 100%;
+          background:  #333;
+        }
+        .navs {
+          width: 100%;
+          padding: 0;
+          box-shadow: 0px 1px 1px rgba(0,0,0,0.2);
+          .nav-logo {
+              display: block;
+          }
+          .nav-logo.active {
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            .logo {
+              background-image: url('https://http://icons-for-free.com/free-icons/png/512/1313573.png');
+            }
+          }
+          .nav-links{
+            display: none;
+            float: none;
+            .nav-item{
+              display: block;
+              margin: 0;
+              padding: 0;
+            }
+            .nav-label,{
+              display: block;
+              margin:0;
+              padding: 20px 10px;
+              
+            }
+            .nav-sub-menu {
+              max-height:0;
+              overflow: hidden;
+              transition: 0.3s all;
+              transform: none;
+              opacity:0;
+              transform: none;
+              top:0;
+              position: relative;
+              padding: 0;
+              
+              .product {
+
+                .p-logo {
+                  background-size: 29%;
+                }
+              }
+            }
+            .has-sub-menu:hover .nav-sub-menu{
+              opacity:0;
+              transform: none;
+            }
+          }
+          .nav-links.active {
+            display: block;
+            background: rgba(0,0,0,0.4);
+            text-transform: uppercase;
+            .nav-item {
+                color: white;
+               a {
+                color: white;
+                text-transform: uppercase;
+               }
+              
+            }
+            .nav-sub-menu.active {
+              transform: none;
+              transition: 0.3s all;
+              position: relative;
+              display: block;
+              opacity: 1;
+              border-radius: 0;
+              padding: 0;
+              max-height: 400px;
+              top:0;
+            }
+            .nav-sub-menu::before{
+             display: none;   
+            }
+          }
+        }
+        
+      }
+    }
+  }

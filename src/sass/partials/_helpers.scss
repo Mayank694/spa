@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.gradient-light {
+    background-image: linear-gradient(to bottom, rgba(57, 115, 230, 0.2), transparent);
+}
+.l-page {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+li{
+    list-style-type: none;
+}
+a,a:hover{
+    text-decoration: none;
+}
+.first-fold {
+    padding-top:100px;
+    
+}

@@ -1,0 +1,12 @@
+
+{
+    "extends": ["semistandard"],
+    "parser": "babel-eslint",
+    "rules": {
+      "strict": 0
+    },
+    "globals": {
+      "jQuery" : true,
+      "$" : true
+    }
+  }
