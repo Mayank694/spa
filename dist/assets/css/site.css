@@ -1885,6 +1885,11 @@ header {
           color: rgba(0, 0, 0, 0.4); }
       header .nav-wrapper .navs .nav-links .nav-sub-item {
         padding: 5px; }
+        header .nav-wrapper .navs .nav-links .nav-sub-item .nav-sub-link {
+          font-size: 14px;
+          color: rgba(0, 0, 0, 0.5); }
+      header .nav-wrapper .navs .nav-links .nav-sub-item:hover {
+        background: red; }
       header .nav-wrapper .navs .nav-links .has-sub-menu:hover .nav-sub-menu {
         opacity: 1;
         transform: rotateY(0deg);
@@ -1897,7 +1902,6 @@ header {
         opacity: 0;
         transition: all 0.3s;
         background: white;
-        padding: 20px 15px;
         z-index: 200;
         border-radius: 5px;
         box-shadow: 0px 0px 19px 1px rgba(0, 0, 0, 0.1), 0px -3px 13px 1px rgba(0, 0, 0, 0.1); }
