@@ -10,7 +10,7 @@ let init = () => {
     console.log('click');
   });
   $(window).on('scroll', function () {
-    if (window.pageYOffset > 56) {
+    if (window.pageYOffset > 57) {
       $('header').addClass('active');
     } else {
       $('header').removeClass('active');
