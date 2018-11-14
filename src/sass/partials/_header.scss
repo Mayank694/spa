@@ -3,11 +3,11 @@
     header {
       position: absolute;
       top:0;
-      border-bottom:1px solid rgba(0,0,0,0.1);
+      // background: white;
+      // box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
       left: 0;
       width:100%;
       .nav-wrapper{
-      background: white;
       .burger {
         display: none;
       }
@@ -113,10 +113,21 @@
       }
     }
   }
+  header.active {
+    position: fixed;
+    z-index: 400;
+    background: white;
+    box-shadow: 0px 4px 1px rgba(0, 0, 0, 0.1);
+  }
+
 
   // for mobile and tablet
   @media only screen and (max-width:600px){
     header {
+      border-bottom: none;
+      box-shadow: unset;
+      height: 0px;
+      transition: 0.3s all;
       .nav-wrapper {
         .burger {
           margin-right:20px;
@@ -161,7 +172,6 @@
         .navs {
           width: 100%;
           padding: 0;
-          box-shadow: 0px 1px 1px rgba(0,0,0,0.2);
           .nav-logo {
               display: block;
           }
@@ -238,5 +248,12 @@
         }
         
       }
+    }
+    header.active {
+      background: white;
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+      position: fixed;
+      z-index: 400;
+      height: 60px;
     }
   }

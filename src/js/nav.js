@@ -9,6 +9,13 @@ let init = () => {
     $('.nav-sub-menu').toggleClass('active');
     console.log('click');
   });
+  $(window).on('scroll', function () {
+    if (window.pageYOffset > 56) {
+      $('header').addClass('active');
+    } else {
+      $('header').removeClass('active');
+    }
+  });
 };
 
 export default {init};
